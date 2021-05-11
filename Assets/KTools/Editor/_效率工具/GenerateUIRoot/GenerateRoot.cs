@@ -15,7 +15,7 @@
         private static GameObject canvans;
 
         public static string rootName = "UIRoot";
-        public static string rootLayerNamw = "UIObj";
+        public static string rootLayerNamw = "UI";
         public static string windowName = "配置置Root相关属性";
         public string width = "1920";
         private bool getIndex;
@@ -61,8 +61,9 @@
             GUILayout.Space(2.5f);
             if (GUILayout.Button("Kmz出品,联系方式 QQ:940636956 欢迎来 B站 Github 知乎一起讨论！！！", GUILayout.Height(43.5f)))
             {
-                System.Diagnostics.Process.Start("https://space.bilibili.com/32211044/video");
+                System.Diagnostics.Process.Start("https://github.com/kmz0110/KFramwwork.UnityTools");
                 GUIUtility.ExitGUI();
+                Close();
             }       
             GUILayout.EndVertical();
             GUILayout.EndHorizontal();
@@ -310,7 +311,7 @@
             }
             if (targetObj!=null)
             {
-                Debug.Log("设置UILayer");
+
                 targetObj.layer = LayerMask.NameToLayer(layerName);
             }
             else
